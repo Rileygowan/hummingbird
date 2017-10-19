@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter
 
 **Forget talking,**
 Tweeter is the future of communication.
