@@ -1,13 +1,30 @@
-/* NEW TWEET INPUT */
-#nav-bar {
-  z-index: 1000;
+/*COMPOSE BUTTON*/
+#compose {
+  color: #1DB29C;
+  border: 1px solid black;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 10px;
+  padding: 20px 20px;
+  width: 130px;
+  float: right;
 }
+
+#compose:hover {
+  color: black;
+  background-color: white;
+}
+
+/*MAIN*/
 .container {
   padding-top: 80px;
   background-color: #fff;
   height: 100%;
 }
 
+/*NEW TWEET*/
 .new-tweet {
   display: none;
   background-color: #eee;
@@ -18,6 +35,7 @@
   border: 1px solid #d3d3d3;
   border-radius: 10px;
 }
+
 .container textarea {
   padding-left: 5px;
   width: 100%;
@@ -32,7 +50,8 @@
   float: right;
   font-size: .8em;
 }
-/* NEW TWEET POSTED */
+
+/*TWEET TEMPLATE - HIDDEN IN HTML*/
 .tweet-template header {
   background-color: #eee;
   border-radius: 10px 10px 0 0;
@@ -96,9 +115,10 @@
 }
 
 .tweet-template .tweet-template {
-  margin: 8px 0;
+  margin: 8px auto;
 }
 
+/*TEMPLATE ON HOVER*/
 .tweet-template:hover footer i {
   display: block;
 }
@@ -109,22 +129,5 @@
 
 .tweet-template:hover header h5 {
   color: #918f8f;
-}
-
-#compose {
-  color: #1DB29C;
-  border: 1px solid black;
-  background-color: rgba(255,255,255,0.9);
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-right: 100px;
-  padding: 20px 20px;
-  width: 130px;
-  float: right;
-}
-
-#compose:hover {
-  color: black;
-  background-color: white;
 }
 

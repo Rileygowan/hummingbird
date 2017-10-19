@@ -1,3 +1,4 @@
+// Max character function
 $(document).on('ready', function(){
   const MAXCHARS = 140;
   $('.new-tweet textarea').on('keyup', function(event){
@@ -9,15 +10,3 @@ $(document).on('ready', function(){
     counter.css('color', color);
   });
 });
-
-/* STACKOVERFLOW
-
-$(document).ready(function(){
-
-});
-
-$(function(){
-
-})
-
-*/

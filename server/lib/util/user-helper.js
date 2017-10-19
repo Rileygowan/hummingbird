@@ -2,7 +2,6 @@
 
 const Chance = require("chance");
 const chance = new Chance();
-
 const md5 = require('md5');
 
 module.exports = {
@@ -15,7 +14,7 @@ module.exports = {
 
     let userHandle = "@";
     if (Math.random() > 0.5) {
-      let prefix    = chance.prefix({gender: gender});
+      let prefix = chance.prefix({gender: gender});
       prefix = prefix.replace(".", "");
       userHandle += prefix
     }
