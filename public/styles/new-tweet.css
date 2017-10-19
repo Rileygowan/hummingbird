@@ -1,12 +1,17 @@
 /* NEW TWEET INPUT */
+#nav-bar {
+  z-index: 1000;
+}
 .container {
+  padding-top: 80px;
   background-color: #fff;
   height: 100%;
 }
 
 .new-tweet {
+  display: none;
   background-color: #eee;
-  margin: auto 2em;
+  margin: 1em 2em;
   padding: 0 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -104,5 +109,22 @@
 
 .tweet-template:hover header h5 {
   color: #918f8f;
+}
+
+#compose {
+  color: #1DB29C;
+  border: 1px solid black;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 100px;
+  padding: 20px 20px;
+  width: 130px;
+  float: right;
+}
+
+#compose:hover {
+  color: black;
+  background-color: white;
 }
 

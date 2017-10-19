@@ -124,10 +124,8 @@ $(function() {
         $("#user-input").submit(function(event){
             event.preventDefault();
             var textInput = $(this).find('textarea').val();
-            console.log(textInput);
             var textInputLength = $(this).find('textarea').val().length;
-            console.log(textInputLength);
-            if (textInput === false || textInput === null || textInput < 1) {
+            if (!textInput) {
               alert('You didn\'t enter anything!');
             } else if (textInputLength > 140) {
               alert('Your tweet is too long. Keep it under 140 characters.')
@@ -136,10 +134,12 @@ $(function() {
                     url:'/tweets/',
                     method: 'POST',
                     data: $(this).serialize(),
+                    //success:renderTweets;
                     success:function(result){
                       renderTweets([result]);
                     }
             });
+            this.reset();
           }
         });
 
@@ -155,6 +155,13 @@ $(function() {
     })
   }
   loadTweets()
+
+  $('#compose').on('click', function(){
+    var $textarea = $('#user-input').find('textarea');
+    $('.new-tweet').slideToggle();
+    $textarea.select();
+  })
+
   // var form = $('#user-input');
   // var submit = $('#submitter');
   // $(submit).on('click', function(event){
