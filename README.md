@@ -15,6 +15,10 @@ Go ahead. Give Tweeter a try.
 Passerby:
 >This is the best Twitter clone I've ever seen.
 
+## Screenshots
+!["Individual tweet"](https://github.com/Rileygowan/tweeter/blob/master/docs/tweeter-box.png?raw=true)
+!["Tweeter UI"](https://github.com/Rileygowan/tweeter/blob/master/docs/tweeter-ui.png?raw=true)
+
 ## Dependencies
 
 - Express
