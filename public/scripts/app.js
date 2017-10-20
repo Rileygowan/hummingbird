@@ -1,5 +1,12 @@
 //On DOM ready
 $(function() {
+
+  $('#tweets').on('click', '.fa-heart', function () {
+    $(this).toggleClass('like');
+    $(this).setAttribute('data-likes', 1);
+    console.log(this);
+  });
+
 //Alerts user if their tweet is too long || their input is blank.
 // Also, resets character counter && textarea on submit
   $("#user-input").submit(function(event){
@@ -22,7 +29,7 @@ $(function() {
               }
       });
       this.reset();
-      counter.text(140);
+      counter.text(140);sdfsdf
     }
   });
 

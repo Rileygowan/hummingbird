@@ -11,5 +11,11 @@ module.exports = function makeDataHelpers(db) {
     getTweets: function(callback) {
       db.collection('tweets').find().toArray(callback);
     }
+    // addLike: function() {
+    //   db.collection('tweets').find(/*tweetID*/).
+    // },
+    // removeLike: function() {
+    //   db.collection('tweets')
+    // }
   }
 };

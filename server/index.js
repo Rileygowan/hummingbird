@@ -6,6 +6,14 @@ const bodyParser    = require("body-parser");
 const app           = express();
 const MongoClient   = require("mongodb").MongoClient;
 const url           = 'mongodb://localhost:27017/tweeter';
+const sassMiddleware= require('node-sass-middleware')
+
+// SASS preprocessor
+app.use(sassMiddleware({
+    src: './stylesheets',
+    dest: './public/styles',
+    prefix:  '/styles'
+}))
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -17,6 +25,7 @@ MongoClient.connect(url, (err, db)=>{
     throw err;
   }
   console.log(`Succeeded to connect: ${url}`);
+
 //data-helpers.js handed db
   const DataHelpers = require("./lib/data-helpers.js")(db);
 //./routes/tweets handed Datahelpers
