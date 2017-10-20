@@ -1,3 +1,6 @@
+$grey: #eee;
+$dark-grey: #d3d3d3;
+$font-stack: 'Roboto Condensed', sans-serif;
 
 html {
   box-sizing: border-box;
@@ -7,10 +10,10 @@ html {
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: $font-stack;
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: $grey;
 }
 
 #nav-bar {
@@ -37,7 +40,7 @@ color: #e8fdff;
 /*COMPOSE BUTTON*/
 #compose {
   color: #00A588;
-  border: 1px solid black;
+  border: 1px solid #000;
   background-color: rgba(255,255,255,0.9);
   border-radius: 10px;
   margin-top: 10px;
@@ -47,7 +50,7 @@ color: #e8fdff;
   width: 130px;
   float: right;
     &:hover {
-      color: black;
+      color: #000;
       background-color: white;
     }
 }
@@ -69,19 +72,19 @@ color: #e8fdff;
       font-size: .8em;
     }
     .new-tweet h2 {
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #000;
     }
 }
 
 /*NEW TWEET*/
 .new-tweet {
   display: none;
-  background-color: #eee;
+  background-color: $grey;
   margin: 1em 2em;
   padding: 0 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border: 1px solid #d3d3d3;
+  border: 1px solid $dark-grey;
   border-radius: 10px;
     #submitter {
       margin-top: 5px;
@@ -93,7 +96,7 @@ color: #e8fdff;
 .tweet-template {
   margin: 2em 2em;
   padding-bottom: 10px;
-  border: 1px solid #d3d3d3;
+  border: 1px solid $dark-grey;
   border-radius: 10px;
     p.tweet {
       color: #4B7079;
@@ -101,7 +104,7 @@ color: #e8fdff;
       margin: 30px 0 30px 0;
     }
     header {
-      background-color: #eee;
+      background-color: $grey;
       border-radius: 10px 10px 0 0;
         img {
           width: 45px;
@@ -126,7 +129,7 @@ color: #e8fdff;
 
     }
     footer {
-      border-top: 1px solid #eee;
+      border-top: 1px solid $grey;
         h6 {
           font-weight: 300;
           margin: 0;
@@ -143,21 +146,22 @@ color: #e8fdff;
           right: 10px;
         }
     }
+    &:hover {
+      border: 1px solid #aaaaaa;
+        header h5 {
+          color: #918f8f;
+        }
+        footer i {
+          display: block;
+        }
+    }
+}
+.like {
+  color: red;
 }
 
-.tweet-template:hover {
-  border: 1px solid #aaaaaa;
-}
-
-.tweet-template:hover header h5 {
-  color: #918f8f;
-}
 
 
-/*TEMPLATE ON HOVER*/
-.tweet-template:hover footer i {
-  display: block;
-}
 
 
 
