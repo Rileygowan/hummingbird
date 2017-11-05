@@ -18,7 +18,7 @@ Passerby:
 ## Screenshots
 !["Individual tweet"](https://github.com/Rileygowan/tweeter/blob/master/docs/tweeter-box.png?raw=true)
 !["Another individual tweet"](https://github.com/Rileygowan/tweeter/blob/master/docs/tweeter-box2.png?raw=true)
-!["HummingBird UI"](https://github.com/Rileygowan/tweeter/blob/master/docs/tweeter-ui.png?raw=true)
+!["HummingBird UI"](https://github.com/Rileygowan/tweeter/blob/feature/likes/docs/hummingbird-ui.png?raw=true)
 
 ## Dependencies
 
