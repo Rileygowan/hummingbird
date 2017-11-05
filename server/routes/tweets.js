@@ -41,10 +41,13 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  // tweetsRoutes.post("/like", function(req, res){
-  //   if (!req.body.data) {}
-  // })
-
+  tweetsRoutes.post("/likes", function(req, res) {
+    var user = req.body.user;
+    var likes = req.body.likes;
+    DataHelpers.addLike(user, likes, (err) => {
+      console.log('yo')
+  })
+})
   return tweetsRoutes;
 
 };

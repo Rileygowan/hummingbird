@@ -3,8 +3,22 @@ $(function() {
 
   $('#tweets').on('click', '.fa-heart', function () {
     $(this).toggleClass('like');
-    $(this).setAttribute('data-likes', 1);
-    console.log(this);
+    if ($(this).attr('data-likes') == '0') {
+      $(this).attr('data-likes', '1');
+    } else {
+      $(this).attr('data-likes', '0');
+    }
+    var likes = $(this).attr('data-likes');
+    var user = $(this).parent().parent().find('.user').text();
+    var data = {user: user, likes: likes}
+    $.ajax({
+      url: '/tweets/likes',
+      method: 'POST',
+      data: data,
+      success: function(result){
+        console.log(result);
+      }
+    });
   });
 
 //Alerts user if their tweet is too long || their input is blank.
@@ -29,7 +43,7 @@ $(function() {
               }
       });
       this.reset();
-      counter.text(140);sdfsdf
+      counter.text(140);
     }
   });
 
